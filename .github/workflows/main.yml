@@ -128,11 +128,11 @@ jobs:
           spec: cypress/tests/ui/*
           config-file: cypress.config.ts
         env:
-          CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          # Recommended: pass the GitHub token lets this action correctly
-          # determine the unique run id necessary to re-run the checks
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
+#          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+#          # Recommended: pass the GitHub token lets this action correctly
+#          # determine the unique run id necessary to re-run the checks
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   ui-firefox-tests:
     timeout-minutes: 15
@@ -167,17 +167,17 @@ jobs:
           wait-on: "http://localhost:3000"
           wait-on-timeout: 120
           browser: firefox
-          record: true
+          record: false
           parallel: true
           group: "UI - Firefox"
           spec: cypress/tests/ui/*
           config-file: cypress.config.ts
         env:
-          CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          # Recommended: pass the GitHub token lets this action correctly
-          # determine the unique run id necessary to re-run the checks
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
+#          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+#          # Recommended: pass the GitHub token lets this action correctly
+#          # determine the unique run id necessary to re-run the checks
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   ui-firefox-mobile-tests:
     timeout-minutes: 15
@@ -213,14 +213,14 @@ jobs:
           wait-on: "http://localhost:3000"
           wait-on-timeout: 120
           browser: firefox
-          record: true
+          record: false
           parallel: true
           group: "UI - Firefox - Mobile"
           spec: cypress/tests/ui/*
           config-file: cypress.config.ts
         env:
-          CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          # Recommended: pass the GitHub token lets this action correctly
-          # determine the unique run id necessary to re-run the checks
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
+#          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+#          # Recommended: pass the GitHub token lets this action correctly
+#          # determine the unique run id necessary to re-run the checks
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
